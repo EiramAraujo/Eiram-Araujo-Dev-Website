@@ -114,7 +114,7 @@
       "about.title": "El que construye esto",
       "about.portraitAlt": "Eiram Araujo junto a uno de los dispositivos A.N.A.L.",
       "about.role": "Hardware · Firmware · Integración",
-      "about.body": "Soy Eiram Araujo. Diseño y construyo dispositivos electrónicos custom. Si tienes una idea de reward físico para tu stream, la bajamos a realidad: diseño de hardware, firmware del MCU, integración con Twitch. Dispositivos existentes o desde cero.",
+      "about.body": "Soy Eiram Araujo. Diseño y construyo dispositivos electrónicos custom. Si tienes una idea de reward físico para tu stream, la hacemos realidad: diseño de hardware, firmware del MCU, integración con Twitch. Dispositivos existentes o desde cero.",
       "about.listTitle": "Lo que puedo construir",
       "about.list1": "Dispositivos del inventario, listos para integrar.",
       "about.list2": "Hardware custom diseñado específicamente para tu idea.",
