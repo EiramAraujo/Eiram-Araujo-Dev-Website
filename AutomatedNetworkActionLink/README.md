@@ -43,4 +43,4 @@ Open `scripts/i18n.js` and edit the `es` / `en` dictionary objects. Any element 
 
 ## Contact
 
-Eiram Araujo — eiramaraujo1998@gmail.com
+Eiram Araujo — eiram.araujo@eiramaraujodev.com
