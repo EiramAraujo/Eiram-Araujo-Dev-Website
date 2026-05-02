@@ -5,7 +5,7 @@ const RESUME = {
   name: "Eiram Emmanuel Araujo Chávez",
   short: "Eiram Araujo",
   email: "eiram.araujo@eiramaraujodev.com",
-  location: "San Nicolás de los Garza, Mexico",
+  location: "Mexico",
   links: {
     linkedin: "https://www.linkedin.com/in/eiram-araujo-14256b207/",
     github: "https://github.com/EiramAraujo",
@@ -65,6 +65,14 @@ const RESUME = {
   ],
   projects: [
     {
+      id: "flash-tool",
+      title_key: "proj_flash_t",
+      desc_key: "proj_flash_d",
+      stack: ["Python", "LPUART", "Embedded"],
+      year: "2022",
+      image: "assets/flasher-project.png",
+    },
+    {
       id: "social-bot",
       title_key: "proj_bot_t",
       desc_key: "proj_bot_d",
@@ -87,15 +95,7 @@ const RESUME = {
       stack: ["Ionic", "Angular", "Google Maps API"],
       year: "2021",
       image: "assets/ionic-app-project.png",
-    },
-    {
-      id: "flash-tool",
-      title_key: "proj_flash_t",
-      desc_key: "proj_flash_d",
-      stack: ["Python", "LPUART", "Embedded"],
-      year: "2022",
-      image: "assets/flasher-project.png",
-    },
+    }
   ],
   skills: {
     languages: ["C#", "Python", "JavaScript", "TypeScript"],
@@ -170,7 +170,7 @@ const I18N = {
     // About
     about_h: "About",
     about_p1:
-      "I'm a Computer Science graduate from UANL (with a year at Otto-von-Guericke in Magdeburg). I currently build features on a large-scale ERP at Epicor — the kind of software where careful details matters more than a flashy demo.",
+      "I'm a Software Developer graduated from UANL (with a year at Otto-von-Guericke in Magdeburg). I currently build features on a large-scale ERP at Epicor — the kind of software where careful details matters more than a flashy demo.",
     about_p2:
       "Before that, I worked on embedded firmware at Hoffmann Group in Munich, flashing high-precision BLE industrial tools over LPUART. That mix — enterprise scale and low-level pragmatism — is how I approach problems.",
     about_p3:
@@ -223,11 +223,11 @@ const I18N = {
     spoken_h: "Languages I speak",
     // Contact
     contact_h: "Let's talk",
-    contact_lede: "I'm open to Software Engineering roles — backend, or embedded.",
+    contact_lede: "I'm open to Software Engineering roles — backend or embedded.",
     contact_email: "Email",
     contact_resume: "PDF résumé",
     // Footer
-    footer_built: "Designed and built by Eiram Araujo",
+    footer_built: "Eiram Araujo",
     footer_year: "2026",
     // Tweaks
     tw_theme: "Theme",
@@ -267,7 +267,7 @@ const I18N = {
     qf_focus: "Foco actual",
     about_h: "Sobre mí",
     about_p1:
-      "Soy egresado de Ciencias Computacionales por la UANL (con un año en Otto-von-Guericke, Magdeburgo). Hoy construyo funcionalidades en un ERP a gran escala en Epicor — software donde los detalles cuidadosos pesan más que un demo llamativo.",
+      "Soy un desarrollador de software graduado de la UANL (con un año en Otto-von-Guericke, Magdeburgo). Hoy construyo funcionalidades en un ERP a gran escala en Epicor — software donde los detalles cuidadosos pesan más que un demo llamativo.",
     about_p2:
       "Antes trabajé en firmware embebido en Hoffmann Group, en Múnich, programando herramientas industriales BLE de alta precisión vía LPUART. Esa mezcla — escala empresarial y pragmatismo de bajo nivel — es como abordo los problemas.",
     about_p3:
@@ -302,7 +302,7 @@ const I18N = {
     voices_e: "Referencias",
     voices_h: "Voces",
     voices_lede: "Extractos de referencias — cartas completas disponibles a petición.",
-    tm_q1: "[...]El Sr. Araujo Chávez siempre adquirió excelentes conocimientos técnicos en un período de tiempo impresionantemente corto y siempre fue capaz de aplicar e implementar estos conocimientos en su trabajo diario con muy buenos resultados.",
+    tm_q1: "[...]el Sr. Araujo Chávez siempre adquirió excelentes conocimientos técnicos en un tiempo impresionantemente corto y siempre fue capaz de aplicarlos e implementarlos en su trabajo diario con muy buenos resultados.",
     tm_q2: "Se movió entre testing de firmware y tooling sin perder ritmo. Pragmático, cuidadoso y fácil de tratar.",
     tm_q3: "Estudiante destacado — curioso, metódico y consistentemente entre los mejores de su generación durante seis semestres.",
     tm_r1: "Jefe de Desarrollo en Sistemas de Control Avanzados",
@@ -318,7 +318,7 @@ const I18N = {
     contact_lede: "Estoy abierto a roles de Ingeniería de Software — backend o embebido.",
     contact_email: "Correo",
     contact_resume: "CV en PDF",
-    footer_built: "Diseñado y construido por Eiram Araujo",
+    footer_built: "Eiram Araujo",
     footer_year: "2026",
     tw_theme: "Tema",
     tw_accent: "Acento",
@@ -356,7 +356,7 @@ const I18N = {
     qf_focus: "Aktueller Fokus",
     about_h: "Über mich",
     about_p1:
-      "Ich bin Informatik-Absolvent der UANL (mit einem Jahr an der Otto-von-Guericke-Universität Magdeburg). Aktuell baue ich Features in einem groß angelegten ERP bei Epicor — Software, in der sorgfältige Details mehr zählen als eine schicke Demo.",
+      "Ich bin ein Softwareentwickler und Absolvent der UANL (mit einem Jahr an der Otto-von-Guericke-Universität Magdeburg). Aktuell baue ich Features in einem groß angelegten ERP bei Epicor — Software, in der sorgfältige Details mehr zählen als eine schicke Demo.",
     about_p2:
       "Davor habe ich bei Hoffmann Group in München an Embedded-Firmware gearbeitet und hochpräzise BLE-Industriewerkzeuge per LPUART geflasht. Diese Mischung — Enterprise-Skala und Low-Level-Pragmatismus — prägt meine Herangehensweise.",
     about_p3:
@@ -391,7 +391,7 @@ const I18N = {
     voices_e: "Referenzen",
     voices_h: "Stimmen",
     voices_lede: "Auszüge aus Referenzen — vollständige Schreiben auf Anfrage.",
-    tm_q1: "[...]Herr Araujo Chávez eignete sich stets in beeindruckend kurzer Zeit ausgezeichnete Fachkenntnisse an und konnte diese in seiner täglichen Arbeit immer mit sehr guten Ergebnissen anwenden und umsetzen.",
+    tm_q1: "[...]Herr Araujo Chavez stets in beeindruckend kurzer Zeit ausgezeichnete Fachkenntnisse und konnte diese immer mit sehr gutem Erfolg in die tägliche Arbeit einbringen und umsetzen.",
     tm_q2: "Er wechselte mühelos zwischen Firmware-Testing und Tooling. Pragmatisch, sorgfältig und angenehm in der Zusammenarbeit.",
     tm_q3: "Ein herausragender Student — neugierig, methodisch und sechs Semester in Folge konstant unter den Besten seines Jahrgangs.",
     tm_r1: "Leiter der Entwicklung für fortschrittliche Steuerungssysteme",
@@ -407,7 +407,7 @@ const I18N = {
     contact_lede: "Ich bin offen für Software-Engineering-Rollen — Backend oder Embedded.",
     contact_email: "E-Mail",
     contact_resume: "Lebenslauf (PDF)",
-    footer_built: "Entworfen und gebaut von Eiram Araujo",
+    footer_built: "Eiram Araujo",
     footer_year: "2026",
     tw_theme: "Thema",
     tw_accent: "Akzent",

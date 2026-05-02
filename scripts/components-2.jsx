@@ -436,11 +436,6 @@ function Footer({ t, lang, setLang }) {
         color: "var(--ink-muted)", letterSpacing: "0.04em",
       }}>
         <div>© {t.footer_year} · {t.footer_built}</div>
-        <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
-          <a href={window.RESUME.links.linkedin} target="_blank" rel="noreferrer" style={footLink}>LinkedIn</a>
-          <a href={window.RESUME.links.github} target="_blank" rel="noreferrer" style={footLink}>GitHub</a>
-          <a href={`mailto:${window.RESUME.email}`} style={footLink}>Email</a>
-        </div>
       </div>
     </footer>
   );
