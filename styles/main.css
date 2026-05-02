@@ -1,0 +1,119 @@
+/* ──────────────────────────────────────────────────────────────
+   Resume — base stylesheet
+   Theme tokens (--bg, --ink, --accent, etc.) are set as inline
+   CSS variables on .ea-root by JS, so they cascade to everything
+   inside. Edit colors / fonts there (in scripts/components-1.jsx,
+   inside the THEMES object), or override here.
+   ────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #0e1014;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  color: #eef0f3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Skip link ─────────────────────────────────────────────── */
+.ea-skip {
+  position: absolute; left: -9999px; top: 8px;
+  background: var(--ink); color: var(--bg);
+  padding: 8px 14px; border-radius: 8px; z-index: 100;
+  text-decoration: none; font-size: 13px;
+}
+.ea-skip:focus { left: 12px; }
+
+/* ── Layout containers ─────────────────────────────────────── */
+.ea-row {
+  max-width: 1180px; margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 56px);
+}
+
+.ea-grid {
+  max-width: 1180px; margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 80px);
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .ea-grid { grid-template-columns: 1fr; }
+  .ea-hero-aside { order: -1; max-width: 220px; }
+  .ea-about-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .ea-job { grid-template-columns: 1fr !important; gap: 8px !important; }
+  .ea-nav-links { display: none !important; }
+  .ea-nav-mobile { display: flex !important; }
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.ea-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 18px; border-radius: 99px;
+  font-family: var(--font-body); font-size: 14.5px; font-weight: 500;
+  text-decoration: none; cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    transform .18s cubic-bezier(.2,.7,.2,1),
+    background .18s, color .18s, border-color .18s, box-shadow .18s;
+}
+.ea-btn-primary { background: var(--ink); color: var(--bg); }
+.ea-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -8px var(--ink);
+}
+.ea-btn-ghost {
+  background: transparent; color: var(--ink);
+  border-color: var(--rule-strong);
+}
+.ea-btn-ghost:hover {
+  background: color-mix(in oklab, var(--ink) 6%, transparent);
+  border-color: var(--ink-soft);
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+@keyframes eaPulse {
+  0%, 100% { box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 25%, transparent); }
+  50%      { box-shadow: 0 0 0 8px color-mix(in oklab, var(--accent) 0%,  transparent); }
+}
+@keyframes eaSpin  { to { transform: rotate(360deg); } }
+@keyframes eaDraw  { to { stroke-dashoffset: 0; } }
+@keyframes eaBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes eaType  { 0%, 45% { opacity: 0; } 50%, 100% { opacity: 1; } }
+@keyframes eaRing  {
+  0%   { r: 5;  opacity: 1; }
+  100% { r: 14; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+/* ── Certifications scroll list ───────────────────────────── */
+.ea-cert-list::-webkit-scrollbar { width: 6px; }
+.ea-cert-list::-webkit-scrollbar-track { background: transparent; }
+.ea-cert-list::-webkit-scrollbar-thumb {
+  background: var(--rule-strong); border-radius: 99px;
+}
+.ea-cert-list::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-muted);
+}
+.ea-cert-wrap { position: relative; }
+.ea-cert-wrap::after {
+  content: ""; position: absolute; left: 0; right: 8px; bottom: 28px;
+  height: 24px; pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  opacity: 0; transition: opacity .2s;
+}
+.ea-cert-wrap[data-overflow="true"]::after { opacity: 1; }
